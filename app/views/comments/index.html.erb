@@ -1,0 +1,21 @@
+<h1>HI</h1>
+
+<%= link_to '新增其他資料' , new_book_comment_path %>
+
+
+<table>
+  <tr>
+    <td>birthday</td>
+    <td>gender</td>
+    <td>comment</td>
+  </tr>
+
+
+  <% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.birthday %></td>
+    <td><%= comment.gender %></td>
+    <td><%= comment.content %></td>
+  </tr>
+  <% end %>
+</table>

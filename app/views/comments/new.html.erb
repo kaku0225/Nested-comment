@@ -1,0 +1,21 @@
+<h1>新增</h1>
+
+<%= form_for(@comment, url: book_comments_path(params[:book_id])) do |form| %>
+
+<div>
+  <%= form.label :birthday %>
+  <%= form.date_field :birthday %>
+</div>
+<div>
+  <%= form.label :gender %>
+  <%= form.text_field :gender %>
+</div>
+<div>
+  <%= form.label :content %>
+  <%= form.text_area :content %>
+</div>
+<div>
+  <%= form.submit %>
+</div>
+
+<% end %>

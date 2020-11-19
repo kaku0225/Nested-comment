@@ -1,0 +1,25 @@
+<h1>歡迎</h1>
+
+<%= flash[:notice] %>
+
+<%= link_to '新增內容' , new_book_path %>
+
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Author</td>
+    <td>Pirce</td>
+  </tr>
+
+<% @book.each do |book| %>
+  <tr>
+    <td><%= link_to book.name , book_path(book.id) %></td>
+    <td><%= book.author %></td>
+    <td><%= book.price %></td>
+    <td><%= link_to '編輯' , edit_book_path(book.id) %></td>
+    <td><%= link_to '刪除' , book_path(book.id), method: 'delete'%></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>
